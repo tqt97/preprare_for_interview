@@ -4,8 +4,8 @@
 
 ### 1. Khái niệm cơ bản
 #### 1.1 Class (Lớp)
-    Class là một bản thiết kế hoặc mẫu cho các đối tượng. Nó định nghĩa các thuộc tính (properties) và phương thức (methods) mà các đối tượng thuộc lớp đó sẽ có.
-    Ví dụ, bạn có thể tạo một lớp Car để mô phỏng các thuộc tính và hành vi của một chiếc xe.
+Class là một bản thiết kế hoặc mẫu cho các đối tượng. Nó định nghĩa các thuộc tính (properties) và phương thức (methods) mà các đối tượng thuộc lớp đó sẽ có.
+Ví dụ, bạn có thể tạo một lớp Car để mô phỏng các thuộc tính và hành vi của một chiếc xe.
 ```php
         class Car {
             public $color;
@@ -17,8 +17,8 @@
         }
 ```
 #### 1.2 Object (Đối tượng)
-    Object là một thể hiện cụ thể của một lớp. Khi bạn tạo một đối tượng từ lớp, bạn đang tạo ra một phiên bản cụ thể của lớp đó với các giá trị cụ thể cho các thuộc tính.
-     dụ, bạn có thể tạo một đối tượng Car có màu đỏ và thuộc hiệu Toyota.
+Object là một thể hiện cụ thể của một lớp. Khi bạn tạo một đối tượng từ lớp, bạn đang tạo ra một phiên bản cụ thể của lớp đó với các giá trị cụ thể cho các thuộc tính.
+Ví dụ, bạn có thể tạo một đối tượng Car có màu đỏ và thuộc hiệu Toyota.
 
 ```php
         $myCar = new Car();
@@ -28,8 +28,8 @@
 ```
 
 #### 1.3 Encapsulation (Đóng gói)
-    Encapsulation là quá trình đóng gói dữ liệu và các phương thức xử lý dữ liệu đó trong một đối tượng. Điều này giúp bảo vệ dữ liệu khỏi bị truy cập hoặc sửa đổi từ bên ngoài.
-    Bạn có thể ẩn các thuộc tính của một đối tượng bằng cách sử dụng các từ khóa như private hoặc protected, và cung cấp các phương thức getter và setter để truy cập hoặc sửa đổi dữ liệu.
+Encapsulation là quá trình đóng gói dữ liệu và các phương thức xử lý dữ liệu đó trong một đối tượng. Điều này giúp bảo vệ dữ liệu khỏi bị truy cập hoặc sửa đổi từ bên ngoài.
+Bạn có thể ẩn các thuộc tính của một đối tượng bằng cách sử dụng các từ khóa như private hoặc protected, và cung cấp các phương thức getter và setter để truy cập hoặc sửa đổi dữ liệu.
 
 ```php
         class Car {
@@ -46,8 +46,8 @@
         }
 ```
 #### 1.4 Inheritance (Kế thừa)
-    Inheritance cho phép một lớp mới (subclass) kế thừa các thuộc tính và phương thức của một lớp hiện có (superclass). Điều này giúp tái sử dụng mã nguồn và tạo ra các lớp chuyên biệt hơn.
-    Ví dụ, bạn có thể tạo lớp ElectricCar kế thừa từ lớp Car và thêm thuộc tính batteryCapacity.
+Inheritance cho phép một lớp mới (subclass) kế thừa các thuộc tính và phương thức của một lớp hiện có (superclass). Điều này giúp tái sử dụng mã nguồn và tạo ra các lớp chuyên biệt hơn.
+Ví dụ, bạn có thể tạo lớp ElectricCar kế thừa từ lớp Car và thêm thuộc tính batteryCapacity.
 
 ```php
         class ElectricCar extends Car {
@@ -60,8 +60,8 @@
 ```
 
 #### 1.5 Polymorphism (Đa hình)
-    Polymorphism cho phép các đối tượng từ các lớp khác nhau có thể được xử lý thông qua cùng một giao diện (interface). Điều này có nghĩa là một phương thức có thể có các hành vi khác nhau tùy thuộc vào lớp mà nó đang hoạt động.
-    Ví dụ, phương thức drive có thể hoạt động khác nhau đối với Car và ElectricCar.
+Polymorphism cho phép các đối tượng từ các lớp khác nhau có thể được xử lý thông qua cùng một giao diện (interface). Điều này có nghĩa là một phương thức có thể có các hành vi khác nhau tùy thuộc vào lớp mà nó đang hoạt động.
+Ví dụ, phương thức drive có thể hoạt động khác nhau đối với Car và ElectricCar.
 
 ```php
         class Car {
