@@ -3,6 +3,7 @@
 ### Đoạn code mẹo
 
 #### 1. Tối ưu hóa mã vòng lặp
+
 ```php
 // Đoạn code ban đầu
 for ($i = 0; $i < count($array); $i++) {
@@ -15,9 +16,11 @@ for ($i = 0; $i < $count; $i++) {
     echo $array[$i];
 }
 ```
+
 **Lý do:** Việc tính toán `count($array)` trong mỗi lần lặp sẽ tốn thời gian. Lưu kết quả của `count($array)` trong một biến sẽ tăng tốc độ vòng lặp.
 
 #### 2. Sử dụng `foreach` thay vì `for`
+
 ```php
 // Đoạn code ban đầu
 for ($i = 0; $i < count($array); $i++) {
@@ -29,11 +32,13 @@ foreach ($array as $item) {
     echo $item;
 }
 ```
+
 **Lý do:** `foreach` thường dễ đọc hơn và thực thi nhanh hơn so với `for` trong một số trường hợp.
 
 ### Đánh đố
 
 #### 1. Xử lý lỗi và ngoại lệ
+
 ```php
 try {
     // Mã có thể gây ra lỗi
@@ -44,9 +49,11 @@ try {
     echo "Caught Exception: " . $e->getMessage();
 }
 ```
+
 **Câu hỏi:** Hãy giải thích cách PHP xử lý lỗi và ngoại lệ trong đoạn code trên.
 
 #### 2. Sử dụng PDO để truy vấn cơ sở dữ liệu
+
 ```php
 <?php
 $dsn = 'mysql:host=localhost;dbname=testdb';
@@ -67,9 +74,11 @@ try {
 }
 ?>
 ```
+
 **Câu hỏi:** Hãy giải thích cách sử dụng PDO để truy vấn cơ sở dữ liệu và tại sao nên sử dụng PDO thay vì các phương pháp khác như `mysql_query`.
 
 #### 3. Sử dụng Composer để quản lý thư viện
+
 ```php
 {
     "require": {
@@ -77,9 +86,11 @@ try {
     }
 }
 ```
+
 **Câu hỏi:** Hãy giải thích cách sử dụng Composer để quản lý thư viện trong dự án PHP.
 
 #### 4. Sử dụng Sessions và Cookies
+
 ```php
 // Khởi tạo session
 session_start();
@@ -96,6 +107,7 @@ setcookie('username', 'john_doe', time() + (86400 * 30), "/");
 // Lấy giá trị từ cookie
 echo 'Username: ' . $_COOKIE['username'];
 ```
+
 **Câu hỏi:** Hãy giải thích sự khác biệt giữa Sessions và Cookies và khi nào nên sử dụng chúng.
 
 ### Câu hỏi phỏng vấn
