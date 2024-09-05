@@ -1,0 +1,97 @@
+Dưới đây là một số câu hỏi phỏng vấn JavaScript phổ biến, từ cơ bản đến nâng cao, giúp bạn đánh giá kiến thức của ứng viên về ngôn ngữ này.
+
+### Câu hỏi cơ bản về JavaScript
+1. **JavaScript là gì?**  
+   - JavaScript là một ngôn ngữ lập trình hướng đối tượng được sử dụng chủ yếu để phát triển web. Nó có thể chạy trong trình duyệt và trên server với Node.js.
+
+2. **Sự khác biệt giữa `let`, `const`, và `var` là gì?**
+   - `var`: có phạm vi hàm (function scope), không có tính năng block scope, và có thể bị hoisting.
+   - `let`: có phạm vi block scope và có thể thay đổi giá trị.
+   - `const`: giống `let`, nhưng giá trị không thể thay đổi sau khi khởi tạo.
+
+3. **Hoisting là gì?**
+   - Hoisting là cơ chế mặc định của JavaScript, trong đó các khai báo biến (`var`) và hàm được "nâng" lên đầu phạm vi trước khi mã thực thi. Tuy nhiên, chỉ có khai báo được hoisting, không phải khởi tạo giá trị.
+
+4. **Event Bubbling và Event Capturing là gì?**
+   - **Event Bubbling**: Sự kiện được kích hoạt từ phần tử con và di chuyển ngược lên phần tử cha.
+   - **Event Capturing**: Sự kiện được kích hoạt từ phần tử cha và di chuyển xuống phần tử con.
+
+5. **Arrow function trong JavaScript là gì và khi nào nên sử dụng nó?**
+   - Arrow function là một cú pháp ngắn gọn hơn cho việc khai báo hàm, đồng thời **không có từ khóa `this`** riêng. Nên sử dụng khi bạn không cần một giá trị `this` mới, chẳng hạn trong các callback hoặc closure.
+
+6. **Sự khác biệt giữa `==` và `===` trong JavaScript là gì?**
+   - `==`: So sánh giá trị sau khi thực hiện ép kiểu (type coercion).
+   - `===`: So sánh cả giá trị và kiểu dữ liệu, không thực hiện ép kiểu.
+
+7. **Closure là gì?**
+   - Closure là một hàm bên trong có thể truy cập các biến của hàm cha, ngay cả khi hàm cha đã hoàn tất thực thi. Điều này tạo ra một **phạm vi từ vựng** (lexical scope) cho biến.
+
+8. **Callback là gì?**
+   - Callback là một hàm được truyền như một tham số vào hàm khác và được gọi lại bên trong hàm đó khi một tác vụ cụ thể hoàn thành.
+
+### Câu hỏi nâng cao về JavaScript
+1. **Promises là gì và cách hoạt động của chúng?**
+   - Promises là một cách tiếp cận để xử lý các tác vụ bất đồng bộ. Nó đại diện cho một giá trị chưa biết khi tạo promise, và giá trị đó có thể được hoàn tất (`resolve`) hoặc thất bại (`reject`) trong tương lai.
+   - Có 3 trạng thái của Promise: `pending` (chờ), `resolved` (hoàn tất), và `rejected` (thất bại).
+
+2. **Async/await trong JavaScript là gì?**
+   - `async/await` là cú pháp hiện đại để xử lý bất đồng bộ, dựa trên Promises. Nó cho phép viết mã bất đồng bộ theo cách tuyến tính, giúp dễ đọc hơn so với sử dụng `.then()`.
+
+3. **Event loop hoạt động như thế nào trong JavaScript?**
+   - Event loop là cơ chế giúp JavaScript quản lý các tác vụ bất đồng bộ. Nó liên tục kiểm tra **call stack** và **task queue** để xem có tác vụ nào cần thực thi không. Khi call stack trống, event loop sẽ lấy tác vụ từ task queue và đưa vào call stack để thực thi.
+
+4. **Debounce và Throttle là gì và cách chúng hoạt động?**
+   - **Debounce**: Hạn chế việc thực hiện hàm liên tục bằng cách chỉ gọi hàm sau một khoảng thời gian không có yêu cầu mới.
+   - **Throttle**: Hạn chế số lần thực hiện hàm trong một khoảng thời gian nhất định. Nó đảm bảo rằng hàm được gọi một lần mỗi `n` milliseconds, bất kể có bao nhiêu yêu cầu.
+
+5. **Prototype là gì trong JavaScript?**
+   - Prototype là một cơ chế trong JavaScript cho phép các đối tượng kế thừa các thuộc tính và phương thức từ một đối tượng khác. Tất cả các đối tượng đều có một thuộc tính prototype từ đối tượng cha của chúng.
+
+6. **Sự khác biệt giữa `null`, `undefined`, và `NaN` là gì?**
+   - `null`: Đại diện cho một giá trị trống hoặc không có giá trị.
+   - `undefined`: Đại diện cho một biến chưa được khởi tạo hoặc chưa có giá trị gán.
+   - `NaN`: Đại diện cho "Not-a-Number", thường xảy ra khi một phép toán số học không hợp lệ.
+
+7. **What are IIFE (Immediately Invoked Function Expression)?**
+   - IIFE là một hàm trong JavaScript được định nghĩa và thực thi ngay lập tức. Điều này giúp tránh ô nhiễm phạm vi toàn cục.
+
+   ```js
+   (function() {
+     console.log("This is an IIFE");
+   })();
+   ```
+
+8. **`this` trong JavaScript là gì và hoạt động như thế nào?**
+   - `this` là một từ khóa tham chiếu đến đối tượng mà hàm hiện tại đang được gọi. Giá trị của `this` phụ thuộc vào ngữ cảnh của hàm và cách hàm đó được gọi.
+     - Trong một phương thức của đối tượng, `this` tham chiếu đến đối tượng đó.
+     - Trong một hàm toàn cục hoặc hàm thông thường, `this` tham chiếu đến đối tượng global (window trong trình duyệt).
+     - Trong các hàm arrow, `this` không có giá trị riêng, mà kế thừa từ ngữ cảnh bên ngoài.
+
+### Câu hỏi liên quan đến DOM và sự kiện
+1. **DOM là gì?**
+   - DOM (Document Object Model) là một giao diện lập trình cho tài liệu HTML và XML. Nó đại diện cho tài liệu như một cấu trúc cây, trong đó mỗi phần tử là một nút (node).
+
+2. **Làm thế nào để thêm một phần tử vào DOM bằng JavaScript?**
+   - Bạn có thể sử dụng `document.createElement()` để tạo phần tử và `appendChild()` hoặc `insertBefore()` để thêm phần tử vào DOM.
+
+   ```js
+   const newElement = document.createElement('div');
+   document.body.appendChild(newElement);
+   ```
+
+3. **Sự khác biệt giữa `stopPropagation()` và `preventDefault()` là gì?**
+   - `stopPropagation()`: Ngăn chặn sự kiện lan truyền qua các phần tử khác trong cây DOM.
+   - `preventDefault()`: Ngăn chặn hành vi mặc định của sự kiện (ví dụ: ngăn chặn form submit hoặc liên kết mở trang mới).
+
+### Câu hỏi về hiệu suất và tối ưu hóa
+1. **Bạn làm cách nào để tối ưu hóa hiệu suất của JavaScript trong ứng dụng web?**
+   - Giảm thiểu kích thước file JavaScript.
+   - Sử dụng kỹ thuật **debounce** và **throttle** cho sự kiện.
+   - Sử dụng **lazy loading** cho các thành phần không cần tải ngay lập tức.
+   - Tối ưu hóa việc thao tác DOM, vì DOM cập nhật là một trong những thao tác tốn kém nhất.
+   - Sử dụng các công cụ như Chrome DevTools để tìm và sửa các vấn đề hiệu suất.
+
+2. **Memoization là gì?**
+   - Memoization là một kỹ thuật tối ưu hóa giúp giảm thiểu số lần tính toán lại cho các hàm phức tạp bằng cách lưu trữ kết quả của các hàm đã thực hiện với các tham số đầu vào cụ thể.
+
+Câu hỏi phỏng vấn JavaScript thường bao gồm nhiều chủ đề khác nhau từ cú pháp cơ bản, cơ chế hoạt động của ngôn ngữ đến các khía cạnh nâng cao như async/await, event loop, hoặc tối ưu hóa hiệu suất.
